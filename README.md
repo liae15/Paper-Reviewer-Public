@@ -1,6 +1,6 @@
 # Paper Reviewer
 
-Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making.
+Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making (in this case, it's dependent on the glossary file).
 
 ## What This Does
 
