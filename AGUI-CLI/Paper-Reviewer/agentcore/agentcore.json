@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "PaperReviewer",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "PaperReviewer"
+  },
+  "runtimes": [
+    {
+      "name": "AnalyzerAgent",
+      "build": "Container",
+      "entrypoint": "main.py",
+      "codeLocation": "app/AnalyzerAgent/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "AGUI",
+      "environmentVariables": {
+        "KNOWLEDGE_BASE_ID": "<YOUR_KNOWLEDGE_BASE_ID>",
+        "KB_DATA_SOURCE_ID": "<YOUR_DATA_SOURCE_ID>",
+        "KB_S3_BUCKET": "<YOUR_S3_BUCKET_NAME>"
+      }
+    }
+  ],
+  "memories": [
+    {
+      "name": "AnalyzerAgentMemory",
+      "eventExpiryDuration": 30,
+      "strategies": []
+    }
+  ],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "httpGateways": [],
+  "harnesses": [],
+  "datasets": [],
+  "payments": []
+}
