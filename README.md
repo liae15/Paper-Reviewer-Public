@@ -1,6 +1,6 @@
 # Paper Reviewer
 
-Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making.
+Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making (in this case, it's dependent on the glossary file's subject matter).
 
 ## What This Does
 
@@ -86,6 +86,10 @@ The agent has a few custom tools beyond the standard Strands toolkit:
 The knowledge base isn't a database. It's a set of markdown files that tell the agent how to behave and what format to use. I've been doing similar work in my current internship as a product analyst, building knowledge bases for production use. There are three instruction files (agent_scope.md, analysis_schema.md, topic_dictionary.md) and three example templates that show the agent what its output should look like. The agent reads these at startup, so they're always in context.
 
 To understand what the agent does, start with `AGUI-CLI/Paper-Reviewer/knowledge_base/agent_scope.md`. To see what it produces, look at the example files (prefixed with `_example_`).
+
+## Future Goals
+
+Currently, this project is rather slow and doesn't handle more than one file input very well. My hope is that with some improved memory management and a more filtered information retrieval process, this will improve.
 
 ## Tech Stack
 
