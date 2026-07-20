@@ -3,8 +3,10 @@
 Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making (in this case, it's dependent on the glossary file's subject matter).
 
 ## Demo
+*Click the image below to watch the demo on YouTube.*
 
 [![Paper Reviewer Demo](https://img.youtube.com/vi/0xtoP3Ll--w/maxresdefault.jpg)](https://youtu.be/0xtoP3Ll--w)
+
 
 ## What This Does
 
@@ -33,7 +35,7 @@ Analyzer/
 │       │       └── Dockerfile
 │       └── knowledge_base/         # Same KB files, at project level for visibility
 ├── copilotkit-ui/                  # Next.js chat interface
-│   ├── src/app/page.tsx            # Main page + sidebar config
+│   ├── src/app/page.tsx            # Main page + sidebar configuration
 │   └── .env.local                  # Runtime ARN goes here
 └── aws-auth/                       # Cognito setup scripts
 ```
@@ -93,7 +95,9 @@ To understand what the agent does, start with `AGUI-CLI/Paper-Reviewer/knowledge
 
 ## Future Goals
 
-Currently, this project is rather slow and doesn't handle more than one file input very well. My hope is that with some improved memory management and a more filtered information retrieval process, this will improve.
+Recently, I managed to improve the project's file-handling abilities. It can now process consecutive inputs and displays the produced documents. I also worked out that the agent was checking the knowledge base even before it needed to, slowing down the processing of inputted documents. As such a rewrote my system prompt to ensure the KB documents from are not read repeatedly, but rather only when needed.
+
+However, it is still rather slow, even with my improved system prompt. My hope is that with some improved chunking and a more filtered information retrieval process, this will improve.
 
 ## Tech Stack
 
