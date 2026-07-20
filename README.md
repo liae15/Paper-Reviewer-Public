@@ -2,6 +2,10 @@
 
 Strands-based research agent integrated with AgentCore, Bedrock, CopilotKit, and AGUI. Includes a knowledge base for analyzing and comparing academic sources on AI in economic decision-making (in this case, it's dependent on the glossary file's subject matter).
 
+## Demo
+
+[![Paper Reviewer Demo](https://img.youtube.com/vi/0xtoP3Ll--w/maxresdefault.jpg)](https://youtu.be/0xtoP3Ll--w)
+
 ## What This Does
 
 You give it a research paper, and it gives you back a structured summary, a glossary of key terms, and (once you've fed it more than one paper) a side-by-side comparison. Every finding gets labeled as evidence, inference, or speculation, and the terminology stays consistent across sources using a built-in dictionary of AI and economics terms.
